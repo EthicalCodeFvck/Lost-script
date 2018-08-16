@@ -1,19 +1,22 @@
 import requests, re
 from bs4 import BeautifulSoup
+import sys
 print''' --L O S T - S C R I P--
 	          by EthicalCodeFvck
-Version : 1.0 
+Version : 1.5
 Grad : not priv8
+New update :
+you must type by example : python Lost-Script.py dorker 
+for launch the script 
  ''' 
 print '''
 [*] Dorker (dorker)
 [*] Make your own exploiter (myoe)
 [?] For more information enter : ?
 '''
-menu = raw_input("root@lostscript:~$ ")
-if menu == "dorker": 
+if len(sys.argv) != 2 or sys.argv[1] == "dorker" or "Dorker" :
 	print'''
-	Google : http://google.cmm/search
+	Google : http://google.com/search
 	Bing : http://bing.com/search
 	[?] Write the link you want
 	'''
@@ -35,7 +38,7 @@ if menu == "dorker":
         		file.close()
     		except:
         		continue
-if menu == "myoe":
+if len(sys.argv) != 2 or sys.argv[1] == "myoe" :
     print'''
     -= M  Y  O  E  S  C  R  I  P  T =-
     Version : 0.1
@@ -43,10 +46,16 @@ if menu == "myoe":
     '''
     error = raw_input("For check if vulnerable or not enter a word like in sql injection (You have an error in you SQL syntax) : ")
     poc = raw_input("poc of your exploit : ")
-    template = "import urllibimport sysimport urllib.requestprint('L  O  S  T-S  C  R  I  P  T masse exploiter by MYOE')list = raw_input('name list (ex. Rez.txt) : ')file = open(list, 'r')request = urllib.request.urlopen(filz + "+poc+")body = request.read()request = body.decode('utf-8')if "+error+" in request:	print('[+] Vuln :) ')elif ,"+error+" in request:	print('[-] Not Vuln :( ')"
-    try:
-	       file = open("myoe.py", "a")
-	       except IOerror:
-    	       print(" [×] Hmmm... a error, i think it's impossible to save this file :/")
-	       file.write(template)
-	       file.close
+    template = "import urllibimport sysimport urllib.requestprint('L  O  S  T-S  C  R  I  P  T masse exploiter by MYOE')list = raw_input('name list (ex. Rez.txt) : ')file = open(list, 'r')request = urllib.request.urlopen(file + "+poc+")body = request.read()request = body.decode('utf-8')if "+error+" in request:	print('[+] Vuln :) ')elif ,"+error+" in request:	print('[-] Not Vuln :( ')"
+    file = open("myoe.py", "a")
+    file.write(template)
+    file.close()
+if len(sys.argv) != 2 or sys.argv[1] == "?" :
+    print'''
+    [+]The dorker allows you to do a mass search
+    [+]MYOE bot allows you to create your own mass exploitation script
+    '''
+if len(sys.argv) != 2 or sys.argv[1] != "dorker" or "myoe" or "?" :
+    print("[×] Error thank enter : dorker , myoe or ? for more information")
+
+    
